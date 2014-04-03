@@ -507,7 +507,7 @@
         
         if (completion)
             completion(finished);
-        
+
     }];
 }
 
@@ -532,11 +532,11 @@
 	[self.contentViewController viewWillSlideIn:animated inSlideMenuController:self];
     
     CGRect menuFrame = [self menuViewFrameAccordingToCurrentSlideDirection];
-    
+
     CATransform3D animationReset = CATransform3DIdentity;
     animationReset.m34 = 1.0 / -500;
     animationReset = CATransform3DRotate(animationReset, M_PI / 2, 0.0f, 1.0f, 0.0f);
-    
+
 	[UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
 		contentView.frame = contentViewFrame;
         self.navigationController.navigationBar.frame= navigationBarFrame;
@@ -835,7 +835,7 @@
             CATransform3D animationReset = CATransform3DIdentity;
             animationReset.m34 = 1.0 / -500;
             animationReset = CATransform3DRotate(animationReset, M_PI / 2, 0.0f, 1.0f, 0.0f);
-            
+
 			if (!self.menuWasOpenAtPanBegin)
 			{
 				[self.menuViewController endAppearanceTransition];
@@ -873,7 +873,7 @@
             CATransform3D animationReset = CATransform3DIdentity;
             animationReset.m34 = 1.0 / -500;
             animationReset = CATransform3DRotate(animationReset, (aMaxRotation - fabsf(aRotation)), 0.0f, 1.0f, 0.0f);
-            
+
 			if (self.menuWasOpenAtPanBegin)
 			{
 				[self.contentViewController viewDidSlideIn:YES inSlideMenuController:self];
